@@ -1,19 +1,19 @@
 # mitmproxy Setup Helper
 
-Simple batch scripts to quickly setup/remove [mitmproxy](https://mitmproxy.org/) necessities (such as proxy and certificate). Inspired by [HTTP Toolkit](https://httptoolkit.com/) quick setup. For now, it only supports Windows and Firefox
+Simple batch scripts to quickly setup/remove [mitmproxy](https://mitmproxy.org/) necessities (such as proxy and certificate). Inspired by [HTTP Toolkit](https://httptoolkit.com/) zero setup. For now, it only supports Windows and Firefox
 
 ## Auto Setup for Windows and Firefox
 
 Use the provided `bat` files to setup proxy or install certificate easily:
 - `proxy_windows_set.bat`: add certificate and set proxy on Windows
 - `proxy_windows_unset.bat`: delete certificate and unset proxy on Windows
-- `cert_firefox_add.bat`: add certificate to Firefox
-- `cert_firefox_delete.bat`: delete certificate from Firefox
+- `cert_firefox_add.bat`: add certificate to Firefox and set Firefox to use Windows proxy
+- `cert_firefox_delete.bat`: delete certificate from Firefox and unset Firefox proxy settings
 
 Notes:
-1. Certificate is installed for the current user only (not local machine)
-2. It assumes that Firefox only has 1 default profile and is already configured to use the system proxy
-3. Download `mar-tools` from [Tor Project](https://dist.torproject.org/torbrowser) first (required for Firefox auto setup)
+1. Download `mar-tools` from [Tor Project](https://dist.torproject.org/torbrowser) first (required for Firefox certificate setup)
+2. Certificate is installed for the current user/profile only (not local machine)
+3. It assumes that Firefox only has 1 default profile
 
 <details>
   <summary>Manual setup (the original way)</summary>
